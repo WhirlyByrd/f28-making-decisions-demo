@@ -1,0 +1,39 @@
+let obiwanAttack = 25;
+let anakinAttack = 35;
+
+if(obiwanAttack < anakinAttack){
+    console.log('Anakin has a better attack than Obiwan')
+}else if(obiwanAttack > anakinAttack) {
+    console.log('Obiwan has a better attack than Anakin')
+}else {
+    console.log('Anakin and Obiwan have the same attack')
+}
+
+let obiwanHealth = 100;
+let obiwanDefense = 0;
+
+if(obiwanHealth < anakinAttack){
+    console.log('Obiwan has been killed.')
+} else {
+    obiwanHealth -= anakinAttack;
+    console.log(`Obiwan's health is now at ${obiwanHealth}`)
+}
+
+obiwanDefense += 30;
+
+for(let i = 0; i < 5;){
+    obiwanHealth -= (anakinAttack - obiwanDefense)
+    if(obiwanHealth <= 0){
+        console.log('Obiwan is slain.')
+    }else {
+        console.log(`Obiwan's health is now at ${obiwanHealth}`)
+    }
+}
+
+while(obiwanHealth > 0){
+    obiwanHealth -= (anakinAttack - obiwanDefense)
+    console.log(`Obiwan's health is now at ${obiwanHealth}`)
+    if(obiwanHealth <= 0){
+        console.log('Obiwan was slain')
+    }
+}
